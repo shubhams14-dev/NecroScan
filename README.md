@@ -1,32 +1,32 @@
 **Idle Scan Implementation**
 
-Author: ShubhamSandip SalunkeDate: November30,2025
+**Author**: Shubham Sandip Salunke Date: November 30,2025
 
-Description
+**Description**
 
-This toolperformsa TCP IdleScan (side-channelattack)todeterminethe statusofa TCP port ona
-targetmachine without sendinganypackets tothe targetfrom the attacker's real IP address.Itrelies
-ona "zombie"host with a predictableIP IDsequence.
+This tool performs a TCP IdleScan (side-channelattack)todeterminethe status of a TCP port on a
+target machine without sending any packets to the target from the attacker's real IP address.It relies
+on a "zombie" host with a predictable IP ID sequence.
 
-Prerequisites
+**Prerequisites**
 OS: Ubuntu 20.04 (SEED VM Recommended)
 
 Python: 3.8+
 
-Libraries: scapy
+**Libraries**: scapy
 
-Installation
+**Installation**
 
 sudo pip3 install scapy
 
 chmod +x idle_scanner.py
 
-Usage
+**Usage**
 
-The scriptrequires three arguments: the IPofthe zombie, the IP ofthe target, andthe port toscan.
+The script requires three arguments: the IP of the zombie, the IP of the target, and the port to scan.
 sudo ./idle_scanner.py <ZOMBIE_IP> <TARGET_IP> <PORT>
 
-Example
+**Example**
 
-Scanningport 22 (SSH)ontarget10.9.0.6 usingzombie 10.9.0.5:
+Scanning port 22 (SSH)on target 10.9.0.6 using zombie 10.9.0.5:
 sudo ./idle_scanner.py 10.9.0.5 10.9.0.6 22
